@@ -6,13 +6,13 @@ public class Main {
 
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
-        int num1, num2;
         do {
-            System.out.println("Podaj liczby do dodania: ");
-            num1 = scan.nextInt();
-            num2 = scan.nextInt();
-            if(num2 == 0 || num1 == 0) break;
-            System.out.printf("Wynik dodawania: %d + %d = %d%n", num1, num2, num1 + num2);
+            System.out.println("Podaj liczbe: ");
+            int num1 = scan.nextInt();
+            if( num1 == 0) break;
+            String bin = Integer.toBinaryString(num1);
+            String hex = Integer.toHexString(num1).toUpperCase();
+            System.out.printf("DEC = %d, BIN = %s, HEX = Ox%s\n",num1,bin,hex);
         }
         while (true);
     }

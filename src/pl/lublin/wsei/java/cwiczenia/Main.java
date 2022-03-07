@@ -1,24 +1,13 @@
 package pl.lublin.wsei.java.cwiczenia;
-
+import static java.lang.Math.pow;
+import static java.lang.Math.log;
 public class Main {
 
     public static void main(String[] args) {
-
-        System.out.println("Metoda print: ");
-        System.out.print("Ala");
-        System.out.print("ma");
-        System.out.print("kota");
-        System.out.print("\n");
-
-        System.out.println("Metoda println:");
-        System.out.println("Ola");
-        System.out.println("ma");
-        System.out.println("psa");
-        System.out.println("Metoda printf:");
-
-        String smt = "Rower";
-        double pr = 1234.564;
-        int wh = 4;
-        System.out.printf("Kasia ma %20s o %d kołach za %.2f zł ",smt,wh,pr);
+        System.out.printf("%s %12s %12s\n","arg","log2(arg)","sum(arg)");
+        int sum = 0;
+        for (double i = 0; i < 10; i++) {
+            System.out.printf("%3d\t%10d\t%10d\n",(int)pow(2,i),(int)(log(pow(2,i)) / log(2)),sum+=pow(2,i));
+        }
     }
 }

@@ -1,13 +1,18 @@
 package pl.lublin.wsei.java.cwiczenia;
-import static java.lang.Math.pow;
-import static java.lang.Math.log;
+import java.util.Scanner;
+
 public class Main {
 
     public static void main(String[] args) {
-        System.out.printf("%s %12s %12s\n","arg","log2(arg)","sum(arg)");
-        int sum = 0;
-        for (double i = 0; i < 10; i++) {
-            System.out.printf("%3d\t%10d\t%10d\n",(int)pow(2,i),(int)(log(pow(2,i)) / log(2)),sum+=pow(2,i));
-        }
+        Scanner scan = new Scanner(System.in);
+        int num1,num2;
+       do {
+           System.out.println("Podaj pierwszą liczbę: ");
+           num1 = scan.nextInt();
+           System.out.println("Podaj drugą liczbę: ");
+           num2 = scan.nextInt();
+           System.out.printf("Wynik dodawania: %d + %d = %d%n", num1, num2, num1 + num2);
+       }
+       while((num1 != 0) && (num2 != 0));
     }
 }

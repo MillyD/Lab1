@@ -8,12 +8,10 @@ public class Main {
         Scanner scan = new Scanner(System.in);
         int num1, num2;
         do {
-            System.out.println("Podaj pierwszą liczbę: ");
+            System.out.println("Podaj liczby do dodania: ");
             num1 = scan.nextInt();
-            if(num1 == 0) break;
-            System.out.println("Podaj drugą liczbę: ");
             num2 = scan.nextInt();
-            if(num2 == 0) break;
+            if(num2 == 0 || num1 == 0) break;
             System.out.printf("Wynik dodawania: %d + %d = %d%n", num1, num2, num1 + num2);
         }
         while (true);
